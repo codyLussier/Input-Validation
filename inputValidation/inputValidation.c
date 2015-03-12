@@ -1,5 +1,9 @@
+#include "inputValidation.h"
+
+
 int main()
 {
-	printf("Test\n");
+
+	printf("Enter an address\n");
 	return 0;
 }
