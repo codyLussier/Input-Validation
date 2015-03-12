@@ -7,4 +7,12 @@
 
 using namespace std;
 
+class Input
+{
+public:
+	string input;
 
+private:
+
+	void Input::InputMenu();
+};

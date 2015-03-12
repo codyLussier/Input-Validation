@@ -2,20 +2,26 @@
 #include "Input.h"
 
 
-class Input
+Input::Input()
 {
-public:
-	string input;
 
-private:
 
-	void InputMenu()
-	{
+}
 
-		printf("Would you like to add another entry or ee the current entries");
-		getline(cin, input);
+Input::Input()
+{
 
-		return;
-	}
 
-};
+}
+
+
+void Input::InputMenu()
+{
+
+	printf("Would you like to add another entry or see the current entries");
+	getline(cin, input);
+
+	//to convert a string to char* use string.c_str()
+
+	return;
+}
