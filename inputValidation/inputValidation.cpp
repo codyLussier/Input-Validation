@@ -10,10 +10,10 @@ using namespace std;
 int main()
 {
 	char text[81];
-	cout << "Enter string:";
+	cout << "Enter phone number:";
 	cin.getline(text, 81);
 
-	char numbers[12] = { " 0123456789" };
+	char numbers[15] = { " 0123456789()-" };
 
 	int size_of = strlen(text);
 
@@ -22,7 +22,7 @@ int main()
 
 	for (int a = 0; a<size_of; a++)
 	{
-		for (int b = 0; b<11; b++)
+		for (int b = 0; b<14; b++)
 		{
 			if (text[a] == numbers[b])
 			{
