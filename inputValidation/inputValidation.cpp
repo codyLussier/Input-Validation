@@ -40,3 +40,37 @@ int InputValidation::PhoneNum(char* text)
 	cin >> stop;
 
 }
+
+int InputValidation::Name(char * text)
+{
+
+
+}
+
+
+int InputValidation::StreetAddress(char * text)
+{
+
+
+}
+
+
+int InputValidation::City(char * text)
+{
+
+
+}
+
+
+int InputValidation::Province(char * text)
+{
+
+
+}
+
+
+int InputValidation::PostalCode(char * text)
+{
+
+
+}
