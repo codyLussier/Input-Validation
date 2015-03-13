@@ -13,6 +13,7 @@ Input::~Input()
 
 void Input::InputMenu()
 {
+	int ret;
 	char menu;
 	bool exit = false;
 	char skip;
@@ -28,18 +29,26 @@ void Input::InputMenu()
 	{
 	case 'a':
 
-		do
+		do //for name
 		{
 
 			printf("Please Enter Your Name?\n");
 			getline(cin, name);
-			printf("y for yes, n for no");
-			cin.ignore; //clears buffer
-			cin >> skip;
 
-			if (skip == 'y')
+			ret = validate.validateName(name);
+
+			switch (ret)
 			{
-				exit = true;
+			case 0
+				printf("y for yes, n for no");
+				cin.ignore; //clears buffer
+				cin >> skip;
+
+				if (skip == 'y')
+				{
+					exit = true;
+				}
+
 			}
 
 		} while (exit == false);

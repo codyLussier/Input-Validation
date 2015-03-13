@@ -13,7 +13,7 @@ class Input
 public:
 
 	string input;
-	InputValidation validate;
+	InputValidation validate; //no linked from header
 
 private:
 
