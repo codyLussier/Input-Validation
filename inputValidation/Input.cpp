@@ -291,7 +291,7 @@ void Input::InputMenu()
 
 	} while (done == false);
 
-	//now display
+	Display();
 
 	return;
 }
@@ -328,7 +328,6 @@ void Input::Display()
 		scroll++;
 
 	}
-
 
 	return;
 }
