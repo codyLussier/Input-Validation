@@ -39,8 +39,34 @@ void Input::InputMenu()
 
 			switch (ret)
 			{
-			case 0
+			case 1:
+				printf("")
 				printf("y for yes, n for no");
+				cin.ignore; //clears buffer
+				cin >> skip;
+
+				if (skip == 'y')
+				{
+					exit = true;
+				}
+
+			}
+
+		} while (exit == false);
+
+		do //for address
+		{
+
+			printf("Please Enter Your Name?\n");
+			getline(cin, name);
+
+			ret = validate.validateName(name);
+
+			switch (ret)
+			{
+			case 1:
+				printf("")
+					printf("y for yes, n for no");
 				cin.ignore; //clears buffer
 				cin >> skip;
 
