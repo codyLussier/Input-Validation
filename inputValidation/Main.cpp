@@ -11,10 +11,11 @@ int main()
 
 	//***errors from bad constructor***///
 	//Istantiate Input class
-	Input addressBook;
+	Input addressBookInput;
 
+	printf("Welcome to Address Book by Cody Lussier, Birju Patel, Brandon Erb, Brodie Paterson");
 	//Call menu
-	addressBook.InputMenu;
+	addressBookInput.InputMenu;
 
 	return 1;
 }

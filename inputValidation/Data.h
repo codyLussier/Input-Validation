@@ -1,9 +1,8 @@
 #include <stdio.h>
 using namespace std;
 
-class AddressBookData
+struct  AddressBookData
 {
-public:
 	char name[30];
 	char street[60];
 	char city[60];
