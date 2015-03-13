@@ -1,15 +1,29 @@
 #pragma once
 #include "Input.h"
 
-class Input
+Input::Input()
 {
-public:
-	string input;
-private:
-	void InputMenu()
+
+}
+
+Input::~Input()
+{
+
+}
+
+void Input::InputMenu()
+{
+	char menu;
+
+	printf("Would you like to add another entry or ee the current entries");
+	cin >> menu;
+
+	switch (menu)
 	{
-		printf("Would you like to add another entry or ee the current entries");
-		getline(cin, input);
-		return;
+	default:
+		break;
 	}
-};
+
+
+	return;
+}
