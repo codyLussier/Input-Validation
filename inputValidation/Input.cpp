@@ -20,6 +20,7 @@ void Input::InputMenu()
 
 	//temp variables
 	string name;
+	string address;
 
 	printf("Would you like to add another entry or see the current entries\n");
 	printf("a for add another entry or s for seeing current entries\n");
@@ -35,12 +36,12 @@ void Input::InputMenu()
 			printf("Please Enter Your Name?\n");
 			getline(cin, name);
 
-			ret = validate.validateName(name);
+			ret = validate.validateName(name.c_str());
 
 			switch (ret)
 			{
 			case 1:
-				printf("")
+				printf("Would you like to skep this field and leave it empty\n");
 				printf("y for yes, n for no");
 				cin.ignore; //clears buffer
 				cin >> skip;
@@ -49,24 +50,30 @@ void Input::InputMenu()
 				{
 					exit = true;
 				}
+				break;
+
+			case 0:
+				break;
 
 			}
 
 		} while (exit == false);
 
+		exit = false;
+
 		do //for address
 		{
 
-			printf("Please Enter Your Name?\n");
-			getline(cin, name);
+			printf("Please Enter Your Address?\n");
+			getline(cin, address);
 
-			ret = validate.validateName(name);
+			ret = validate.validateAddress(address);
 
 			switch (ret)
 			{
 			case 1:
-				printf("")
-					printf("y for yes, n for no");
+				printf("Would you like to skep this field and leave it empty\n");
+				printf("y for yes, n for no\n");
 				cin.ignore; //clears buffer
 				cin >> skip;
 
@@ -74,7 +81,8 @@ void Input::InputMenu()
 				{
 					exit = true;
 				}
-
+			case 0:
+				break;
 			}
 
 		} while (exit == false);
