@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Input.cpp" />
-    <ClCompile Include="inputValidation.cpp" />
+    <ClCompile Include="inputValidation.c" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>

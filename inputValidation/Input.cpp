@@ -31,6 +31,7 @@ void Input::InputMenu()
 			validate.PhoneNum;
 			printf("Would You like to leave the field blank?\n");
 			printf("y for yes, n for no");
+			cin.ignore; //clears buffer
 			cin >> skip;
 
 			if (skip == 'y')
