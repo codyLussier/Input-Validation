@@ -1,4 +1,11 @@
-//Input class
+/*
+Input.h
+Assignment 4
+Cody Lussier, Birju Patel, Brandon Erb, zumhliansanglungler,
+Date: March 11, 2014
+Description : Header containing prototypes for the input output class
+*/
+
 #include <iostream>
 #include <string.h>
 #include <iostream>
@@ -11,10 +18,12 @@ using namespace std;
 
 class Input
 {
-public:
-
+private:
 	string input;
 	AddressBookData addressBook[10];
+
+public:
+
 	InputValidation validate; //no linked from header :: validate class variable
 	Input();
 	~Input();

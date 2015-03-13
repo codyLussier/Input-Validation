@@ -1,3 +1,11 @@
+/*
+Input.cpp
+Assignment 4
+Cody Lussier, Birju Patel, Brandon Erb, zumhliansanglungler,
+Date: March 11, 2014
+Description : Test harness For testing a file should be loaded instead of manual inputing boundry tests... etc
+*/
+
 #pragma once
 #include "Input.h"
 
@@ -11,6 +19,12 @@ Input::~Input()
 
 }
 
+/*
+Name: Input Menue
+Parameters: none
+Return value: void
+Descriptions: The method that is the menu for the program, it takes input in and after that displays the output
+*/
 void Input::InputMenu()
 {
 	int ret; //for return values of validation functions
@@ -87,7 +101,7 @@ void Input::InputMenu()
 					}
 					break;
 				case 0:
-					strcpy(addressBook[i].streetAddress, address);
+					strcpy(addressBook[i].streetAddress, address.c_str);
 					exit = true;
 					break;
 				}
@@ -225,7 +239,7 @@ void Input::InputMenu()
 
 			exit = false;
 
-			//exit input loop
+			//exit single entry loop
 			break;
 
 		case 's':

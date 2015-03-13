@@ -1,5 +1,10 @@
-//Test harness
-//For testing a file should be loaded instead of manual inputing boundry tests... etc
+/*
+Main.cpp
+Assignment 4
+Cody Lussier, Birju Patel, Brandon Erb, zumhliansanglungler,
+Date: March 11, 2014
+Description : Test harness For testing a file should be loaded instead of manual inputing boundry tests... etc
+*/
 
 #include <stdio.h>
 using namespace std;

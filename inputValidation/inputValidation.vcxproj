@@ -81,6 +81,7 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="inputValidation.c" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="postalCode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data.h" />
