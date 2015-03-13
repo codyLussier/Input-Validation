@@ -1,11 +1,11 @@
 #include "inputValidation.h"
 #pragma once
 
-int InputValidation::PhoneNum(char* text)
+int InputValidation::PhoneNum()
 {
-	//char text[80];
-	//cout << "Enter phone number:";
-	//cin.getline(text, 81);
+	char text[80];
+	cout << "Enter phone number:";
+	cin.getline(text, 81);
 
 	char numbers[15] = { " 0123456789()-" };
 

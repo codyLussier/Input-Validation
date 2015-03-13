@@ -11,10 +11,10 @@ int main()
 
 	//***errors from bad constructor***///
 	//Istantiate Input class
-	//Input addressBook;
+	Input addressBook;
 
 	//Call menu
-	//addressBook.InputMenu;
+	addressBook.InputMenu;
 
 	return 1;
 }

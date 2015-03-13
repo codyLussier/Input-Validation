@@ -10,7 +10,7 @@ class InputValidation
 {
 
 private:
-	int PhoneNum(char* text);
+	int PhoneNum();
 	int StreetAddress(char * text);
 	int InputValidation::PostalCode(char * text);
 	int InputValidation::Province(char * text);
