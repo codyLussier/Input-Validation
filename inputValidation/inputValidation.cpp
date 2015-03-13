@@ -7,9 +7,8 @@
 using namespace std;
 
 
-int main()
+int PhoneNum(char* text)
 {
-	char text[81];
 	cout << "Enter phone number:";
 	cin.getline(text, 81);
 
@@ -43,6 +42,5 @@ int main()
 
 	int stop;
 	cin >> stop;
-
 
 }
