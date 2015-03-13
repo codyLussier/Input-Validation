@@ -14,11 +14,10 @@ using namespace std;
 int main()
 {
 
-	//***errors from bad constructor***///
 	//Istantiate Input class
 	Input addressBookInput;
 
-	printf("Welcome to Address Book by Cody Lussier, Birju Patel, Brandon Erb, Brodie Paterson");
+	printf("Display String"); //**I don't know what he wants here is there any feedback from the first milestone**//
 	//Call menu
 	addressBookInput.InputMenu;
 

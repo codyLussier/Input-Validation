@@ -16,11 +16,11 @@ Input::Input()
 
 Input::~Input()
 {
-
+	delete addressBook;
 }
 
 /*
-Name: Input Menue
+Name: Input Menu
 Parameters: none
 Return value: void
 Descriptions: The method that is the menu for the program, it takes input in and after that displays the output
@@ -32,7 +32,6 @@ void Input::InputMenu()
 	bool exit = false;
 	bool done = false;
 	char skip;
-	int i = 0;
 
 	//temp variables
 	string name;
@@ -99,6 +98,15 @@ void Input::InputMenu()
 						exit = true;
 						strcpy (addressBook[i].streetAddress, "");
 					}
+					else if (skip == 'n')
+					{
+						exit == false;
+					}
+					else
+					{
+						printf("Invalid input you must enter y or n\n");
+					}
+					
 					break;
 				case 0:
 					strcpy(addressBook[i].streetAddress, address.c_str);
@@ -131,6 +139,15 @@ void Input::InputMenu()
 						exit = true;
 						strcpy(addressBook[i].city, "");
 					}
+					else if (skip == 'n')
+					{
+						exit == false;
+					}
+					else
+					{
+						printf("Invalid input you must enter y or n\n");
+					}
+
 					break;
 				case 0:
 					strcpy(addressBook[i].city, city.c_str);
@@ -163,6 +180,15 @@ void Input::InputMenu()
 						exit = true;
 						strcpy(addressBook[i].province, "");
 					}
+					else if (skip == 'n')
+					{
+						exit == false;
+					}
+					else
+					{
+						printf("Invalid input you must enter y or n\n");
+					}
+
 					break;
 				case 0:
 					strcpy(addressBook[i].province, province.c_str);
@@ -196,6 +222,14 @@ void Input::InputMenu()
 						exit = true;
 						strcpy(addressBook[i].postalCode, "");
 					}
+					else if (skip == 'n')
+					{
+						exit == false;
+					}
+					else
+					{
+						printf("Invalid input you must enter y or n\n");
+					}
 					break;
 				case 0:
 					strcpy(addressBook[i].postalCode, postalCode.c_str);
@@ -228,7 +262,16 @@ void Input::InputMenu()
 						exit = true;
 						strcpy(addressBook[i].phoneNumber, "");
 					}
+					else if (skip == 'n')
+					{
+						exit == false;
+					}
+					else
+					{
+						printf("Invalid input you must enter y or n\n");
+					}
 					break;
+
 				case 0:
 					strcpy(addressBook[i].phoneNumber, phoneNumber.c_str);
 					exit = true;
@@ -237,9 +280,8 @@ void Input::InputMenu()
 
 			} while (exit == false);
 
-			exit = false;
-
 			//exit single entry loop
+			i++;
 			break;
 
 		case 's':
@@ -250,6 +292,43 @@ void Input::InputMenu()
 	} while (done == false);
 
 	//now display
+
+	return;
+}
+
+
+
+/*
+Name: Display
+Parameters: none
+Return value: void
+Descriptions: The method displays the contents of the address book.
+*/
+void Input::Display()
+{
+
+	int scroll = 1;
+
+	system("cls");
+
+	for (int j = 0; j < (i + 1); j++)
+	{
+		if ((scroll % 3 == 0) && scroll != 0)
+		{
+			printf("Press any key to see next page of entries");
+			getchar();
+			system("cls");
+		}
+
+		printf("%s\n", addressBook[i].name);
+		printf("%s\n", addressBook[i].streetAddress);
+		printf("%s,%s,%s\n", addressBook[i].city, addressBook[i].province, addressBook[i].postalCode);
+		printf("%s\n", addressBook[i].phoneNumber);
+		printf("++++++++++++\n\n");
+		scroll++;
+
+	}
+
 
 	return;
 }

@@ -20,7 +20,8 @@ class Input
 {
 private:
 	string input;
-	AddressBookData addressBook[10];
+	AddressBookData * addressBook = new AddressBookData[10];
+	int i = 0;
 
 public:
 
@@ -29,5 +30,6 @@ public:
 	~Input();
 
 	void InputMenu();
+	void Display();
 
 };
