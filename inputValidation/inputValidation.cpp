@@ -1,16 +1,11 @@
+#include "inputValidation.h"
+#pragma once
 
-#include <iostream>
-#include <stdlib.h>
-#include <fstream>
-#include <string.h>
-
-using namespace std;
-
-
-int PhoneNum(char* text)
+int InputValidation::PhoneNum(char* text)
 {
-	cout << "Enter phone number:";
-	cin.getline(text, 81);
+	//char text[80];
+	//cout << "Enter phone number:";
+	//cin.getline(text, 81);
 
 	char numbers[15] = { " 0123456789()-" };
 
@@ -33,12 +28,13 @@ int PhoneNum(char* text)
 	if (counter == size_of)
 	{
 		cout << "Phone number is valid";
+		return 0; //standard return code for normal situation
 
 	}
 
 	else
 		cout << "Phone number is invalid";
-
+		return -1; //return code for exceptions
 
 	int stop;
 	cin >> stop;
