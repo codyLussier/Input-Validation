@@ -17,6 +17,9 @@ void Input::InputMenu()
 	bool exit = false;
 	char skip;
 
+	//temp variables
+	string name;
+
 	printf("Would you like to add another entry or see the current entries\n");
 	printf("a for add another entry or s for seeing current entries\n");
 	cin >> menu;
@@ -27,9 +30,9 @@ void Input::InputMenu()
 
 		do
 		{
-			//logic is flawed
-			validate.PhoneNum;
-			printf("Would You like to leave the field blank?\n");
+
+			printf("Please Enter Your Name?\n");
+			getline(cin, name);
 			printf("y for yes, n for no");
 			cin.ignore; //clears buffer
 			cin >> skip;

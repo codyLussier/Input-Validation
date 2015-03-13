@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <fstream>
 #include "inputValidation.h"
+#include <string>
 using namespace std;
 
 class Input
