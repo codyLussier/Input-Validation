@@ -15,7 +15,7 @@ public:
 
 	string input;
 	AddressBookData addressBook[10];
-	InputValidation validate; //no linked from header
+	InputValidation validate; //no linked from header :: validate class variable
 	Input();
 	~Input();
 
